@@ -1,0 +1,2 @@
+Ce dossier contient des fonctions qui associeront une url à une page HTML 
+Ce qu'ils renvoient est bien une page html et non un objet JSON, c'est en ça qu'ils se distinguent des fonctions définies dans /api 

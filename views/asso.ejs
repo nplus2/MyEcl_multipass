@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>
+			MyECL-Multipass
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+	</head>
+	<body ng-controller="AssoController">
+		
+		Asso : {{asso.nom}} <br />
+		Rechargement : {{autorisations.rechargement}} <br />
+		Administration : {{autorisations.administration}} <br />
+		Vente : {{autorisations.vente}} <br />
+		<a href="#" ng-if="autorisations.rechargement">rechargement</a><br />
+		<a href="#" ng-if="autorisations.vente">vente</a><br />
+		<a href="#" ng-if="autorisations.administration">administration</a><br />
+		<a href="#">parametres</a><br />
+
+		<script type="text/javascript">idAsso = <%= idAsso %> ; </script>
+		<script type="text/javascript" src="/assets/js/asso.js"></script>
+	</body>
+</html>

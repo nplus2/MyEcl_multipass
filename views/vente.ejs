@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<title>
+			MyECL-Multipass
+		</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+	</head>
+	<body ng-controller="VenteController">
+		
+		Vente
+
+		Asso : {{asso.nom}} <br />
+
+		Magasins : <br />
+					<br />
+		<div ng-repeat="magasin in magasins">
+			<b>{{magasin.nom}} </b><br />
+
+			Produits : <br />
+			<div ng-repeat = "produit in magasin.produits">
+				- {{produit.nom}} : {{produit.prixCentimes}}<br />
+				
+			</div>
+			<br />
+		</div>
+		<script type="text/javascript">idAsso = <%= idAsso %> ; </script>
+		<script type="text/javascript" src="/assets/js/vente.js"></script>
+	</body>
+</html>
